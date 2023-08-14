@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float walkSpeed = 12f;
     [SerializeField] private float yawSpeedH = 2.0f;
     [SerializeField] private float pitchSpeedV = 2.0f;
-    [SerializeField] private float yawAngle = 0.0f;
-    [SerializeField] private float pitchAngle = 0.0f;
+    [SerializeField] private float yawAngle = 10f;
+    [SerializeField] private float pitchAngle = 10f;
 
    
 

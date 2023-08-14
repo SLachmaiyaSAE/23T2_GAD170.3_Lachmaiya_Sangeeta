@@ -10,17 +10,20 @@ using UnityEngine.VFX;
 public class ImpactTester : MonoBehaviour
 {
     public GameObject KnifeKitchenPrefab;
-    public Vector3 spawnPosition;
+    public float spawnHeightOffset = 0f;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("You've been chopped up");
+            
         }
         else if (other.gameObject.CompareTag("Untagged"))
         {
             DestroySelf();
+            // Calculate the spawn position with adjusted height
+            Vector3 spawnPosition = transform.position + new Vector3(0f, spawnHeightOffset, 0f);
             Instantiate(KnifeKitchenPrefab, spawnPosition, Quaternion.identity);
         }
     }
@@ -31,6 +34,15 @@ public class ImpactTester : MonoBehaviour
         Destroy(gameObject);
     }
 }
+
+
+// NEED HELP WITH ABOVE - NOT SPAWNING WHERE I WANT IT TO
+      // Also diagonally respawning?
+      // Additionally question - check how I can make the mesh of my octopus more in line with it's body
+
+
+
+
 
 // ORIGINAL CODE GIVEN TO US IN CLASS FROM AARON
 

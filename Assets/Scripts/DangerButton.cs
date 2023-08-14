@@ -16,21 +16,6 @@ public class DangerButton : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private TextMeshPro buttonWarningText;
 
-
-    private void Update()
-    {
-        // When the player presses E to activate the button.....
-        if (Input.GetKeyDown(KeyCode.E) && isPlayerCharacterNextToButton)
-        {
-            //.....spawn a falling jelly cube above them! 
-            Debug.Log("Danger zone activated");
-
-           Instantiate(fallingJellyPrefab, spawnPoint.position, Random.rotation);
-            // GameObject newJelly = Instantiate(fallingJellyPrefab, spawnPoint.position, Random.rotation);
-            // newJelly.GetComponent<Rigidbody>().AddForce(Vector3.up * 800f);
-        }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger has been triggered!");
@@ -57,3 +42,20 @@ public class DangerButton : MonoBehaviour
         }
     }
 }
+
+
+
+
+//private void Update()
+//{
+//    // When the player presses E to activate the button.....
+//    if (Input.GetKeyDown(KeyCode.E) && isPlayerCharacterNextToButton)
+//    {
+//        //.....spawn a falling jelly cube above them! 
+//        Debug.Log("Danger zone activated");
+
+//       Instantiate(fallingJellyPrefab, spawnPoint.position, Random.rotation);
+//        // GameObject newJelly = Instantiate(fallingJellyPrefab, spawnPoint.position, Random.rotation);
+//        // newJelly.GetComponent<Rigidbody>().AddForce(Vector3.up * 800f);
+//    }
+//}

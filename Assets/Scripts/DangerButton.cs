@@ -16,6 +16,15 @@ public class DangerButton : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private TextMeshPro buttonWarningText;
 
+
+    private void Start()
+    {
+       if(tutorialText != null)
+        {
+            tutorialText.enabled = false;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger has been triggered!");

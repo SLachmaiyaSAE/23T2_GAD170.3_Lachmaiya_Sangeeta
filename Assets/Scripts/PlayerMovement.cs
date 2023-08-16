@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float yawAngle = 10f;
     [SerializeField] private float pitchAngle = 10f;
 
-   
 
     // This must be linked to the object that has the "Character Controller" in the inspector. You may need to add this component to the object
     public CharacterController controller;
@@ -36,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
 
     // How high the player can jump
     public float jumpHeight = 2f;
+
+
 
     private void Start()
     {
@@ -61,6 +62,9 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+
+            //Play the JUMP sound effect
+            ////playerAudioSource.PlayOneShot(jumpSoundEffect);
         }
 
         // Rotate the player based off those mouse values we collected earlier

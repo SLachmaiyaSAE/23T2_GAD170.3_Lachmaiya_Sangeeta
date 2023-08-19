@@ -22,7 +22,7 @@ public class ButtonTap : MonoBehaviour
          if (!waterRising)
             {
                 Vector3 newPosition = sinkRiseWater.transform.position;
-                newPosition.y += 30f; 
+                newPosition.y += 25f; 
                 sinkRiseWater.transform.position = newPosition;
 
                 waterRising = true; 

@@ -3950,7 +3950,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 55f65ab2997c0774591d325b65a9fcc4, type: 2}
+  - {fileID: 2100000, guid: cc22fcbb181651843b6cd888094f923e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3988,8 +3988,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444498595}
   m_LocalRotation: {x: -0, y: -0, z: -0.7084648, w: 0.7057462}
-  m_LocalPosition: {x: 390.04, y: -3.1, z: 17.547}
-  m_LocalScale: {x: 2.6382823, y: 19.252453, z: 32.40285}
+  m_LocalPosition: {x: 390.04, y: -3.71, z: 17.547}
+  m_LocalScale: {x: 2.6382823, y: 19.252453, z: 13.705434}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -12209,7 +12209,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e790397ad2dd98745a36eb8da36e9445, type: 2}
+  - {fileID: 2100000, guid: 790b5093bafef374eab3442e5d0883ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27656,7 +27656,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 71.022, y: 170.268, z: 80.803}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.75, y: -77.8}
+  m_AnchoredPosition: {x: 3.75, y: -71.45}
   m_SizeDelta: {x: 5.6162, y: 1.6485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1480524798
@@ -35911,8 +35911,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.070663996, y: 0.0075908615, z: 0.03743663}
-  m_Center: {x: 0.012517628, y: 0.003718719, z: 0.012193222}
+  m_Size: {x: 0.005698873, y: 0.007590861, z: 0.037436623}
+  m_Center: {x: 0.02576557, y: 0.0037187191, z: 0.012193463}
 --- !u!1 &2542621268570687006 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4940325726132613371, guid: c11b2f7d17f9880489e89a2e1393a3ba,

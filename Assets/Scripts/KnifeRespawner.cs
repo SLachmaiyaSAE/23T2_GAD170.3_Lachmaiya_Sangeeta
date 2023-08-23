@@ -13,19 +13,22 @@ public class KnifeRespawner : MonoBehaviour
     public GameObject KnifeKitchen;
     public float spawnHeightOffset = 0f;
 
+    private List<GameObject> spawnedKnifeKitchen = new List<GameObject>();
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("You've been chopped up");
         }
+
         else if (other.gameObject.CompareTag("Untagged"))
         {
             Vector3 spawnPosition = transform.position + new Vector3(0f, spawnHeightOffset, 0f);
             Quaternion spawnRotation = Quaternion.Euler(0f, 90f, 0f);
 
             Debug.Log("knife instantiates");
-      
+
             // Calculate the spawn position
             Instantiate(KnifeKitchen, spawnPosition, spawnRotation);
             StartCoroutine(DelayedDestroySelf());
@@ -34,10 +37,27 @@ public class KnifeRespawner : MonoBehaviour
 
     private IEnumerator DelayedDestroySelf()
     {
-        yield return new WaitForSeconds(0.2f);
-        Destroy(gameObject);
-        Debug.Log("knife destroys");
+            yield return new WaitForSeconds(0.2f);
+            Destroy(gameObject);
+            Debug.Log("knife destroys self");
     }
+
+    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            foreach(var knife in spawnedKnifeKitchen)
+            {
+                Destroy(knife);
+            }
+            spawnedKnifeKitchen.Clear();
+            Debug.Log("spawned knives destroyed");
+        }
+        
+    }
+
+
 }
 
 

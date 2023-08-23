@@ -23,6 +23,8 @@ public class KnifeRespawner : MonoBehaviour
         {
             Vector3 spawnPosition = transform.position + new Vector3(0f, spawnHeightOffset, 0f);
             Quaternion spawnRotation = Quaternion.Euler(0f, 90f, 0f);
+
+            Debug.Log("knife instantiates");
       
             // Calculate the spawn position
             Instantiate(KnifeKitchen, spawnPosition, spawnRotation);
@@ -32,7 +34,9 @@ public class KnifeRespawner : MonoBehaviour
 
     private IEnumerator DelayedDestroySelf()
     {
-        yield return new WaitForSeconds(0f);
+        yield return new WaitForSeconds(0.2f);
+        Destroy(gameObject);
+        Debug.Log("knife destroys");
     }
 }
 
